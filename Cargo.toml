@@ -1,5 +1,17 @@
-[workspace]
+[package]
+name = "domain_utils_macro"
+version = "0.1.0"
+authors = ["qwerty2501 <939468+qwerty2501@users.noreply.github.com>"]
+edition = "2018"
 
-members = [
-	"domains",
-]
+[lib]
+proc-macro = true
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+
+[dev-dependencies]
+domain_utils = { git = "https://github.com/novel-archives/domain_utils" ,branch="main"}
+test-case = "1.1.0"
