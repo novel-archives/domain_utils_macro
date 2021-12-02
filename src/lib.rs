@@ -16,12 +16,6 @@ pub(crate) fn impl_entity_derive(ast: &syn::DeriveInput) -> TokenStream {
                 &self.id
             }
         }
-
-        impl PartialEq for #name{
-            fn eq(&self,other:&Self)->bool{
-                self.id() == other.id()
-            }
-        }
     };
     gen.into()
 }

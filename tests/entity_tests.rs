@@ -19,5 +19,5 @@ fn works_eq(v1: &str, v2: &str) -> bool {
     let ts2 = TestStruct {
         id: Id::new(v2.to_owned()),
     };
-    ts1 == ts2
+    ts1.same_identity_as(&ts2)
 }
